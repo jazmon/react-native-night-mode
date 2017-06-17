@@ -15,7 +15,7 @@
   "directories": {
     "example": "examples"
   },
-  "main": "dist/NightMode",
+  "main": "dist/index.js",
   "author": "Atte Huhtakangas <atte.huhtakangas@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -43,7 +43,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --trailing-comma all --single-quote --parser flow --write src/**/*.js",
     "format": "npm run prettier && npm run lint:fix",
-    "postinstall": "install-self-peers -- --ignore-scripts"
+    "postinstall": "[ \"$NODE_ENV\" != production ] && install-self-peers -- --ignore-scripts"
   },
   "peerDependencies": {
     "react": "16.0.0-alpha.12",

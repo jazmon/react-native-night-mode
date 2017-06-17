@@ -15,7 +15,7 @@
 		"babel-preset-react-native": "2.0.0",
 		"jest": "20.0.4",
 		"react-test-renderer": "16.0.0-alpha.12",
-    "react-native-night-mode": "file:../../"
+    "react-native-night-mode": "jazmon/react-native-night-mode"
 	},
 	"jest": {
 		"preset": "react-native"
