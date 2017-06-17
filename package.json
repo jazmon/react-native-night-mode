@@ -1,0 +1,12 @@
+{
+  "name": "react-native-night-mode",
+  "version": "1.0.0",
+  "description": "Night mode detector for Android",
+  "main": "index.js",
+  "author": "Atte Huhtakangas <atte.huhtakanngas@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.45.1"
+  }
+}

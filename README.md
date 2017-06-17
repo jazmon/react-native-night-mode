@@ -1,0 +1,1 @@
+# Night Mode detector for Android
