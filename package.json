@@ -2,11 +2,70 @@
   "name": "react-native-night-mode",
   "version": "1.0.0",
   "description": "Night mode detector for Android",
-  "main": "index.js",
-  "author": "Atte Huhtakangas <atte.huhtakanngas@gmail.com>",
+  "keywords": [
+    "react",
+    "react-native",
+    "android",
+    "night-mode",
+    "night"
+  ],
+  "bugs": {
+    "url": "https://github.com/jazmon/react-native-night-mode/issues"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "main": "dist/NightMode",
+  "author": "Atte Huhtakangas <atte.huhtakangas@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/jazmon/react-native-night-mode.git",
+    "type": "git"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --trailing-comma all --single-quote --parser flow --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run babel",
+    "clean": "rimraf ./dist",
+    "babel": "babel src --out-dir dist",
+    "test": "flow --show-all-errors",
+    "lint:staged": "lint-staged",
+    "prepublish": "npm run build",
+    "lint": "eslint -c .eslintrc.js src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --trailing-comma all --single-quote --parser flow --write src/**/*.js",
+    "format": "npm run prettier && npm run lint:fix",
+    "postinstall": "install-self-peers -- --ignore-scripts"
+  },
   "peerDependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1"
+  },
+  "devDependencies": {
+    "@team-griffin/install-self-peers": "^1.1.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-react-native": "^2.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-react-native": "^2.3.2",
+    "flow-bin": "^0.48.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.4.4",
+    "rimraf": "^2.6.1"
   }
 }

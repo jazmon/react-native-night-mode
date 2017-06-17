@@ -20,7 +20,7 @@ public class NightModeModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "nightmodeManager";
+        return "NightModeManager";
     }
 
 

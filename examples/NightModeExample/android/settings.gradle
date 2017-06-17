@@ -1,0 +1,5 @@
+rootProject.name = 'NightModeExample'
+include ':react-native-night-mode'
+project(':react-native-night-mode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-night-mode/android')
+
+include ':app'
