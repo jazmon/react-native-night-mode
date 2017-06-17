@@ -43,7 +43,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --trailing-comma all --single-quote --parser flow --write src/**/*.js",
     "format": "npm run prettier && npm run lint:fix",
-    "postinstall": "[ \"$NODE_ENV\" != production ] && install-self-peers -- --ignore-scripts"
+    "install-peerdeps": "install-self-peers -- --ignore-scripts"
   },
   "peerDependencies": {
     "react": "16.0.0-alpha.12",

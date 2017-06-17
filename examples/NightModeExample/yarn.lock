@@ -2994,8 +2994,9 @@ react-devtools-core@^2.1.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-"react-native-night-mode@file:../../":
+react-native-night-mode@jazmon/react-native-night-mode:
   version "1.0.0"
+  resolved "https://codeload.github.com/jazmon/react-native-night-mode/tar.gz/a5341ae93e140addf78985244f8e2e79a0e315fe"
 
 react-native@0.45.1:
   version "0.45.1"
